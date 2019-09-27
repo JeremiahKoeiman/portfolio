@@ -22,6 +22,7 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'b6ec61354e97f32c0ae683041c78392a' => __DIR__ . '/..' . '/scrivo/highlight.php/HighlightUtilities/functions.php',
+        '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -66,6 +67,7 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
             'Symfony\\Component\\Debug\\' => 24,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Permission\\' => 18,
         ),
         'R' => 
         array (
@@ -249,6 +251,10 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Permission\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-permission/src',
+        ),
         'Ramsey\\Uuid\\' => 
         array (
             0 => __DIR__ . '/..' . '/ramsey/uuid/src',
@@ -412,6 +418,7 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\ProductsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProductsController.php',
         'App\\Http\\Controllers\\ReviewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ReviewsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -424,6 +431,8 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\ProductsStoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProductsStoreRequest.php',
         'App\\Http\\Requests\\ProductsUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProductsUpdateRequest.php',
+        'App\\Http\\Requests\\ReviewsStoreRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ReviewsStoreRequest.php',
+        'App\\Http\\Requests\\ReviewsUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ReviewsUpdateRequest.php',
         'App\\Product' => __DIR__ . '/../..' . '/app/Product.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
@@ -3315,6 +3324,7 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
         'Ramsey\\Uuid\\UuidFactoryInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidFactoryInterface.php',
         'Ramsey\\Uuid\\UuidInterface' => __DIR__ . '/..' . '/ramsey/uuid/src/UuidInterface.php',
         'ReviewsTableSeeder' => __DIR__ . '/../..' . '/database/seeds/ReviewsTableSeeder.php',
+        'RoleAndPermissionSeeder' => __DIR__ . '/../..' . '/database/seeds/RoleAndPermissionSeeder.php',
         'SebastianBergmann\\CodeCoverage\\CodeCoverage' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/CodeCoverage.php',
         'SebastianBergmann\\CodeCoverage\\CoveredCodeNotExecutedException' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Exception/CoveredCodeNotExecutedException.php',
         'SebastianBergmann\\CodeCoverage\\Driver\\Driver' => __DIR__ . '/..' . '/phpunit/php-code-coverage/src/Driver/Driver.php',
@@ -3427,6 +3437,29 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
         'SebastianBergmann\\Type\\UnknownType' => __DIR__ . '/..' . '/sebastian/type/src/UnknownType.php',
         'SebastianBergmann\\Type\\VoidType' => __DIR__ . '/..' . '/sebastian/type/src/VoidType.php',
         'SebastianBergmann\\Version' => __DIR__ . '/..' . '/sebastian/version/src/Version.php',
+        'Spatie\\Permission\\Commands\\CacheReset' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CacheReset.php',
+        'Spatie\\Permission\\Commands\\CreatePermission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreatePermission.php',
+        'Spatie\\Permission\\Commands\\CreateRole' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreateRole.php',
+        'Spatie\\Permission\\Commands\\Show' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/Show.php',
+        'Spatie\\Permission\\Contracts\\Permission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Contracts/Permission.php',
+        'Spatie\\Permission\\Contracts\\Role' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Contracts/Role.php',
+        'Spatie\\Permission\\Exceptions\\GuardDoesNotMatch' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/GuardDoesNotMatch.php',
+        'Spatie\\Permission\\Exceptions\\PermissionAlreadyExists' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/PermissionAlreadyExists.php',
+        'Spatie\\Permission\\Exceptions\\PermissionDoesNotExist' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/PermissionDoesNotExist.php',
+        'Spatie\\Permission\\Exceptions\\RoleAlreadyExists' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/RoleAlreadyExists.php',
+        'Spatie\\Permission\\Exceptions\\RoleDoesNotExist' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/RoleDoesNotExist.php',
+        'Spatie\\Permission\\Exceptions\\UnauthorizedException' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/UnauthorizedException.php',
+        'Spatie\\Permission\\Guard' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Guard.php',
+        'Spatie\\Permission\\Middlewares\\PermissionMiddleware' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Middlewares/PermissionMiddleware.php',
+        'Spatie\\Permission\\Middlewares\\RoleMiddleware' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Middlewares/RoleMiddleware.php',
+        'Spatie\\Permission\\Middlewares\\RoleOrPermissionMiddleware' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Middlewares/RoleOrPermissionMiddleware.php',
+        'Spatie\\Permission\\Models\\Permission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Models/Permission.php',
+        'Spatie\\Permission\\Models\\Role' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Models/Role.php',
+        'Spatie\\Permission\\PermissionRegistrar' => __DIR__ . '/..' . '/spatie/laravel-permission/src/PermissionRegistrar.php',
+        'Spatie\\Permission\\PermissionServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-permission/src/PermissionServiceProvider.php',
+        'Spatie\\Permission\\Traits\\HasPermissions' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Traits/HasPermissions.php',
+        'Spatie\\Permission\\Traits\\HasRoles' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Traits/HasRoles.php',
+        'Spatie\\Permission\\Traits\\RefreshesPermissionCache' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Traits/RefreshesPermissionCache.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\CommandLoader\\CommandLoaderInterface' => __DIR__ . '/..' . '/symfony/console/CommandLoader/CommandLoaderInterface.php',
         'Symfony\\Component\\Console\\CommandLoader\\ContainerCommandLoader' => __DIR__ . '/..' . '/symfony/console/CommandLoader/ContainerCommandLoader.php',
@@ -4129,6 +4162,7 @@ class ComposerStaticInit27c50c970a4b8736a77bf199df78de39
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Property\\Property' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Property/Property.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Processor' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Processor.php',
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
+        'UsersTableSeeder' => __DIR__ . '/../..' . '/database/seeds/UsersTableSeeder.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Whoops\\Exception\\ErrorException' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
         'Whoops\\Exception\\Formatter' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Exception/Formatter.php',

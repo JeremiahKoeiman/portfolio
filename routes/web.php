@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 //use Illuminate\Routing\Route;
 
 Route::get('laravel60/public/products/{product}/delete', 'ProductsController@delete')->name('products.delete');
-Route::get('laravel60/public/reviews/{review}/delete', 'ReviewsController@delete')->name('reviews.delete');
 Route::resource('/products', 'ProductsController');
-Route::resource('/reviews', 'ReviewsController');
+
+Route::group(['middleware'=>['role:owner|customer|moderator']], function (){
+    Route::get('laravel60/public/reviews/{review}/delete', 'ReviewsController@delete')
+        ->name('reviews.delete');
+    Route::resource('/reviews', 'ReviewsController');
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
