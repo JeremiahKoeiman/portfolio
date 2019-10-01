@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="rekenmachine.js"></script>
+    <link type="text/css" rel="stylesheet" href="rekenmachine.css">
+    <title>Rekenmachine</title>
+</head>
+<body>
+<div class="bg">
+    <div class="main">
+        <form name="form">
+            <input id="x" type="number" step="0.1" class="textview" name="input">
+            <input id="y" type="number" step="0.1" class="textview" name="input2">
+        </form>
+        <table>
+            <tr>
+            <td><input class="button" type="button" value="/" onclick="delen();"></td>
+            <td><input class="button" type="button" value="x" onclick="keer();"></td>
+                <td><input class="button" type="button" value="√" onclick="wortel();"></td>
+                <td><input class="button" type="button" value="x²" onclick="kwadraat();"></td>
+            </tr>
+            <tr>
+                <td><input class="button" type="button" value="xˆy" onclick="macht();"></td>
+                <td><input class="button" type="button" value="Tab" onclick="tafel();"></td>
+                <td><input class="button" type="button" value="-" onclick="minder();"></td>
+                <td><input class="button" type="button" value="+" onclick="plus();"></td>
+            </tr>
+        </table>
+        <br>
+        <div id="divResult"></div>
+    </div>
+</div>
+
+</body>
+</html>
