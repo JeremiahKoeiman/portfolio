@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input[type=button]{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+    margin: 2px;
+}
+
+.textview{
+    width: 217px;
+    margin: 5px;
+    font-size: 25px;
+    padding: 5px;
+    background-color: #adadad;
+}
+
+td[colspan="2"]>input{
+    width: 107px;
+}
+
+td[rowspan="5"]>input{
+    height: 106px;
+}
+
+.main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)translateY(-50%);
+    background: #182434;
+    color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.bg{
+    background: linear-gradient(135deg, #0571bb 30%, #37a6bb 60%,#68abcd 90%);
+    height: 100%;
+}
+
+.button{
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(-45deg, #0571bb 30%, #37a6bb 60%,#68abcd 90%);
+}
+
+form>input{
+    display: block;
+}
+
+#divResult{
+    height: 100px;
+}
