@@ -1,0 +1,301 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+}
+
+.loader span {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  border: 10px solid rgba(255, 255, 255, 0.2);
+  border-top: 10px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 10px solid rgba(255, 255, 255, 0.8);
+  animation: animate 10s alternate infinite;
+}
+
+.loader span:nth-child(1) {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  animation-delay: -0.1s;
+}
+
+.loader span:nth-child(2) {
+  top: 33px;
+  left: 33px;
+  bottom: 33px;
+  right: 33px;
+  animation-delay: -0.2s;
+}
+
+.loader span:nth-child(3) {
+  top: 66px;
+  left: 66px;
+  bottom: 66px;
+  right: 66px;
+  animation-delay: -0.3s;
+}
+
+.loader span:nth-child(4) {
+  top: 99px;
+  left: 99px;
+  bottom: 99px;
+  right: 99px;
+  animation-delay: -0.4s;
+}
+
+.loader span:nth-child(5) {
+  top: 132px;
+  left: 132px;
+  bottom: 132px;
+  right: 132px;
+  animation-delay: -0.5s;
+}
+
+.loader span:nth-child(6) {
+  top: 165px;
+  left: 165px;
+  bottom: 165px;
+  right: 165px;
+  animation-delay: -0.6s;
+}
+
+.loader span:nth-child(7) {
+  top: 198px;
+  left: 198px;
+  bottom: 198px;
+  right: 198px;
+  animation-delay: -0.7s;
+}
+
+.loader span:nth-child(8) {
+  top: 231px;
+  left: 231px;
+  bottom: 231px;
+  right: 231px;
+  animation-delay: -0.8s;
+}
+
+.textContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -80%);
+  width: 500px;
+  height: 500px;
+}
+
+.layer1 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(0.42% 29.55%, 3.02% 24.86%, 9.26% 76.75%, 0.21% 74.95%);
+  /*background-color: #000;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -1.7s;
+}
+
+.layer2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(3.28% 26.67%, 14.71% 25.58%, 12.74% 78.55%, 9.44% 78.55%);
+  /*background-color: #ff8080;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -1.5s;
+}
+
+.layer3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(14.57% 25.59%, 23.54% 27.38%, 19.72% 77.83%, 12.31% 77.84%);
+  /*background-color: #0000ff;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -1.3s;
+}
+
+.layer4 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(94.79% 27.39%, 99.85% 28.82%, 99.52% 77.47%, 92.32% 75.67%);
+  /*background-color: #400040;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -1.1s;
+}
+
+.layer5 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(23.40% 27.03%, 25.99% 27.02%, 31% 77.83%, 19.49% 78.19%);
+  /*background-color: #004040;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.9s;
+}
+
+.layer6 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(25.86% 27.03%, 43.23% 27.74%, 35.1% 76.39%, 30.98% 77.83%);
+  /*background-color: #00ffff;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.7s;
+}
+
+.layer7 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(42.68% 28.47%, 49.18% 29.19%, 43.32% 75.31%, 35.08% 76.75%);
+  /*background-color: #8000ff;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.5s;
+}
+
+.layer8 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(49.03% 29.91%, 50.81% 30.99%, 51.10% 75.67%, 43.5% 74.95%);
+  /*background-color: #ff8000;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.3s;
+}
+
+.layer9 {
+  position: absolute;
+  left: 50%;
+  top: 50%;  
+  transform: translate(-50%, -50%);
+  clip-path: polygon(50.68% 32.07%, 54.3% 39.64%, 58.69% 74.23%, 51.09% 76.03%);
+  /*background-color: #8080ff;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.1s;
+}
+
+.layer10 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(53.76% 36.03%, 62.51% 39.99%, 62.60% 73.51%, 58.67% 75.31%);
+  /*background-color: #ffff00;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.2s;
+}
+
+.layer11 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(62.57% 40%, 73.18% 30.99%, 66.29% 70.63%, 62.57% 73.51%);
+  /*background-color: #c0c0c0;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.4s;
+}
+
+.layer12 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(73.04% 31.71%, 74.82% 32.06%, 78.60% 71.35%, 66.06% 72.07%);
+  /*background-color: #ff80ff;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.6s;
+}
+
+.layer13 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(74.89% 32.07%, 80.56% 32.42%, 83.32% 72.43%, 78.58% 72.07%);
+  /*background-color: #9d87f8;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -0.8s;
+}
+
+.layer14 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(80.43% 30.27%, 92.05% 33.5%, 86.19% 72.07%, 83.29% 71.71%);
+  /*background-color: #80ff95;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -1s;
+}
+
+.layer15 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  clip-path: polygon(92.33% 31.35%, 94.52% 32.42%, 92.34% 76.39%, 86.17% 72.07%);
+  /*background-color: #fdff80;*/
+  animation: animateText 10s alternate infinite;
+  animation-delay: -1.2s;
+}
+
+h1 {
+  color: white;
+  font-size: 108px;
+  font-weight: lighter;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+    background: rgba(255, 0, 0, 0.2);
+  }
+  20% {
+    background: rgba(255, 255, 0, 0.2);
+  }
+  40% {
+    background: rgba(0, 255, 0, 0.2);
+  }
+  60% {
+    background: rgba(255, 0, 255, 0.2);
+  }
+  80% {
+    background: rgba(0, 255, 255, 0.2);
+  }
+  100% {
+    transform: rotate(720deg);
+    background: rgba(255, 0, 0, 0.2);
+  }
+}
+
+@keyframes animateText {
+  0% {
+    transform: rotate(720deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
