@@ -7,6 +7,6 @@ In this gamewebshop you can register, login, order products and change your data
 
 In the "laravelProject1" branch you will find a Laravel CRUD.
 
-And in the "wordpress" branch you will find a wordpress website that I created. The usernam is "Jeremiah" and the password is "Rj$kxrJY0h3NqetHf8PmeZX3". DO NOT UNZIP, but copy both the zip and installer.php and open the installer.php. The installation will explain itself.
+And in the "wordpress" branch you will find a wordpress website that I created. The usernam is "Jeremiah" and the password is "Rj$kxrJY0h3NqetHf8PmeZX3". DO NOT UNZIP THE ARCHIVE CALLED: "20190430_fotografiefilmwebdesign_258fa498df66bc719084_20190430101511_archive", but copy both the zip and installer.php and open the installer.php. The installation will explain itself.
 
 This will give you overview of the experience that I have.
