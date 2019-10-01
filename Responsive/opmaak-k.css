@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+article, aside, footer, header, main, nav, section {
+    display: block; 
+}
+
+html, body, h1, h2, h3, ul, li, a, p, article, aside, footer, header, main, nav, section {
+    padding: 0%;
+    margin: 0%;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    font-family: 'Nanum Gothic';
+    word-wrap:break-word;
+}
+
+.banner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: lightblue;
+    border-radius: 5px;
+}
+
+.logo {
+    display: none;
+}
+
+.foto {
+    width: 100%;
+}
+
+.section1 {
+    clear: both;
+    margin-top: 105px;
+}
+
+body {
+    background-image: url(Parallex/Welcome%20to%20UE4.jpg);
+}
+
+header, main, nav {
+	padding: 1%;
+	margin: 0.5% auto;
+	width: 90%;
+}
+
+header > p {
+    padding-top: 8px;
+}
+
+.container{
+    display: none;
+}
+
+section {
+    padding: 8px;
+    background-color: lightblue;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 5px 15px rgba(0,0,0,0.22); 
+    margin-top: -25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+article {
+    background-color: white;
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.artc_background_form {
+    display: none;
+}
+
+.topgegevens{
+    width: 95%;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin-top: 120px;
+}
+
+hr {
+        color:blue;
+        border:none;
+        border-top:2px solid blue;
+        height:1px;
+}
+
+video {
+    display:none;
+}
+/*nav met kleinste opmaak*/
+
+nav{
+	margin-right: 1%;
+}
+ 
+nav ul {
+ margin: 0px;
+ padding: 0px;
+ list-style: none;
+}
+ 
+nav ul li {
+ float: left;
+ width: 310px;
+ height: 40px;
+ background-color: lightblue;
+ line-height: 40px;
+ text-align: center;
+ font-size: 20px;
+ margin-right: 2px;
+ transition: all 0.5s ease;
+ color: white;
+}
+nav ul li a {
+ text-decoration: none;
+ color: black;
+ display: block;
+}
+nav ul li a:hover {
+ color: white;
+}
+nav ul li:hover {
+ background-color: darkblue;
+}
+nav ul li ul li {
+ display: none;
+ position:relative;
+}
+nav ul li:hover ul li {
+ display: block;
+    
+}
+/*einde nav*/
+
+header {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/*contact formulier*/
+fieldset {
+    border-radius: 5px;
+    border-color: darkblue;
+}
+
+#formulier{
+    display: none;
+}
+
+aside {
+    margin-top: 119px;
+    margin-right: 4px;
+}
+
+footer {
+    position: fixed;
+    bottom: 10px;
+}
+
+
+/*Media Query's*/
+@media screen and (min-width: 700px){
+.logo {
+    display: block;
+    width: 77.6px;
+    height: 76px;
+}
+    
+.section1 {
+        margin-top: 25px;
+}  
+    
+    header {
+    font-size: 1.7em;
+    font-weight: 300;
+}
+    
+.artc_background_form {
+    display: block;
+    background-color: lightblue;
+    width: 95%;
+    border-radius: 5px;
+}
+    
+#formulier{
+    display: block;
+	width: 			90%;
+	margin-top:		20px;
+    margin-left:    1%;
+    margin-bottom:  1%;
+    border-radius:  12px;
+	border:			6px solid darkblue;
+	padding:		10px;
+	line-height:	20px;
+}
+    
+    
+}
+
+@media screen and (min-width: 900px){
+    header {
+    font-size: 3em;
+    font-weight: 300;
+}
+    
+video {
+    visibility: visible;
+    float: left;
+    padding-left: 0;
+    padding-right: 5px;
+    border-radius: 10px;
+    display:block;
+}
+    
+    aside {
+        float: right;
+        margin-right: 5%;
+    }
+    
+    #formulier{
+        width: 90%;
+    }
+    
+    .artc_background_form{
+        width: 30%;
+        margin-left: 3%;
+    }
+    
+    .topgegevens{
+    width: 30%;
+    margin-left: 3%;
+    margin-top: -10px;
+    }
+    
+    
+    /*Image slider*/
+.container {
+    display: block;
+    margin: 0 auto;
+    margin-top: 150px;
+    margin-bottom: 40px;
+    position: relative;
+    width: 70%;
+    height: 0;
+    padding-bottom: 40%;
+    background: #4c4c4c;
+    border: solid 10px #2c2c2c;
+}
+
+.slide_img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide_img img{
+    width: 100%;
+    height: 100%;
+}
+
+#i1, #i2, #i3, #i4, #i5, #i6, #i7, #i8, #i9{
+    display: none;
+}
+
+.pre, .nxt{
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(88,88,88,.5);
+    z-index: 99;
+    cursor: pointer;
+}
+
+.pre{
+    left: 0;
+}
+
+.nxt{
+    right: 0;
+}
+
+.nav{
+    width: 100%;
+    height: 11px;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+
+.dots{
+    top: -5px;
+    width: 18px;
+    height: 18px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(0,0,0,.6);
+}
+
+.slide_img{
+    z-index: -1;
+}
+
+#i1:checked ~ #one,
+#i2:checked ~ #two,
+#i3:checked ~ #three,
+#i4:checked ~ #four,
+#i5:checked ~ #five,
+#i6:checked ~ #six,
+#i7:checked ~ #seven,
+#i8:checked ~ #eight,
+#i9:checked ~ #nine{
+    z-index: 9;
+}
+
+#i1:checked ~ .nav #dot1,
+#i2:checked ~ .nav #dot2,
+#i3:checked ~ .nav #dot3,
+#i4:checked ~ .nav #dot4,
+#i5:checked ~ .nav #dot5,
+#i6:checked ~ .nav #dot6,
+#i7:checked ~ .nav #dot7,
+#i8:checked ~ .nav #dot8,
+#i9:checked ~ .nav #dot9{
+    background: #fff;
+}
+/*einde slider*/
+}

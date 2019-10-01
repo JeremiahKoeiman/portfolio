@@ -1,0 +1,227 @@
+@charset "UTF-8";
+
+/*article, aside, footer, header, main, nav, section {
+    display: block; 
+}*/
+
+html, body, h1, h2, h3, ul, li, a, p, article, aside, footer, header, main, nav, section {
+    padding: 0%;
+    margin: 0%;
+}
+
+* {
+    font-family: 'Nanum Gothic';
+}
+
+.logo {
+    display: none;
+}
+
+.banner {
+    box-sizing: content-box;
+    width: 99%;
+    height: 10%;
+    color: black;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    text-shadow: 5px 3px 3px rgb(175, 175, 175);
+    margin: 10px;
+    padding: 5px;
+    border: solid 3px darkgray;
+    border-radius: 5px;
+    box-shadow: 15px 15px 55px lightgray;
+}
+
+.foto {
+    width: 100%;
+}
+
+.section1 {
+    clear: both;
+    margin-top: 105px;
+}
+
+
+body {
+    margin: auto;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+header, main, nav {
+	padding: 1%;
+	margin: 0.5% auto;
+	width: 90%;
+}
+
+/*begin nav*/
+nav ul {
+ margin: 0px;
+ padding: 0px;
+ list-style: none;
+}
+ 
+nav ul li {
+ float: left;
+ width: 310px;
+ height: 40px;
+ background-color: rgb(216, 218, 218);
+ line-height: 40px;
+ text-align: center;
+ font-size: 20px;
+ margin-right: 2px;
+ transition: all 0.5s ease;
+ color: white;
+}
+nav ul li a {
+ text-decoration: none;
+ color: black;
+ display: block;
+}
+nav ul li a:hover {
+ color: white;
+}
+nav ul li:hover {
+ background-color: darkgray;
+}
+nav ul li ul li {
+ display: none;
+ position:relative;
+}
+nav ul li:hover ul li {
+ display: block; 
+}
+/*einde nav*/
+
+header {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.container{
+    display: none;
+}
+
+
+section {
+    padding: 8px;
+    background-color: rgb(216, 218, 218);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25), 0 5px 15px rgba(0,0,0,0.22); 
+    margin-top: -25px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+
+article {
+    background-color: white;
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-size: 15px;
+}
+
+.artc_background_form {
+    display: none;
+}
+
+.topgegevens{
+    width: 95%;
+    background-color: lightgray;
+    border-radius: 5px;
+}
+
+hr {
+        color:darkgray;
+        border: solid;
+        height:1px;
+}
+
+#formulier{
+    display: none;
+}
+
+aside {
+    margin-top: 119px;
+    margin-right: 4px;
+}
+
+video{
+        display: none;
+}
+
+footer{
+    position: fixed;
+    bottom: 10px;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 700px){
+    .section1 {
+        margin-top: 25px;
+    }
+    
+    header {
+    font-size: 1.7em;
+    font-weight: 300;
+}
+    
+    .artc_background_form {
+    display: block;
+    background-color: lightgray;
+    width: 95%;
+    border-radius: 5px;
+}
+    
+#formulier{
+    display: block;
+	width: 			90%;
+	margin-top:		20px;
+    margin-left:    1%;
+    margin-bottom:  1%;
+    border-radius:  12px;
+	border:			6px solid darkgray;
+	padding:		10px;
+	line-height:	20px;
+}
+}
+
+
+@media screen and (min-width: 900px){
+    
+header {
+    font-size: 3em;
+    font-weight: 300;
+}
+    
+video {
+    visibility: visible;
+    float: left;
+    padding-left: 0;
+    padding-right: 5px;
+    border-radius: 10px;
+    display:block;
+}
+    
+    aside {
+        float: right;
+        margin-right: 5%;
+    }
+    
+    #formulier{
+        width: 90%;
+    }
+    
+    .artc_background_form{
+        width: 30%;
+        margin-left: 3%;
+    }
+    
+    .topgegevens{
+    clear: both;
+    width: 30%;
+    margin-left: 3%;
+    }
+}
+
