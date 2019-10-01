@@ -7,5 +7,5 @@ In this gamewebshop you can register, login, order products and change your data
 
 In the "laravelProject1" branch you will find a Laravel CRUD.
 
-And in the "wordpress" branch you will find a wordpress website that I created. The 
+And in the "wordpress" branch you will find a wordpress website that I created. The usernam is "Jeremiah" and the password is "Rj$kxrJY0h3NqetHf8PmeZX3"
 
