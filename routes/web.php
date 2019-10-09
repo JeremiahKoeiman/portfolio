@@ -12,13 +12,20 @@
 */
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 //use Illuminate\Routing\Route;
 
-Route::get('laravel60/public/products/{product}/delete', 'ProductsController@delete')->name('products.delete');
+//default route
+Route::get('/', 'ProductsController@index');
+
+//delete product route
+Route::get('laravel60/public/products/{product}/delete', 'ProductsController@delete')
+    ->name('products.delete');
 Route::resource('/products', 'ProductsController');
 
-Route::group(['middleware'=>['role:owner|customer|moderator']], function (){
+//delete review + login route
+Route::group(['middleware'=>['role:owner|moderator|customer']], function (){
     Route::get('laravel60/public/reviews/{review}/delete', 'ReviewsController@delete')
         ->name('reviews.delete');
     Route::resource('/reviews', 'ReviewsController');
@@ -26,4 +33,4 @@ Route::group(['middleware'=>['role:owner|customer|moderator']], function (){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');

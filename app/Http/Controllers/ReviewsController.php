@@ -3,13 +3,24 @@
 namespace App\Http\Controllers;
 
 use App\Review;
-use Illuminate\Http\Request;
+use App\Product;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ReviewsStoreRequest;
 use App\Http\Requests\ReviewsUpdateRequest;
 
 class ReviewsController extends Controller
 {
-   /**
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('permission:create reviews', ['only'=> ['create', 'store']]);
+        $this->middleware('permission:edit reviews', ['only'=> ['edit', 'update']]);
+        $this->middleware('permission:delete reviews', ['only'=> ['delete', 'destroy']]);
+    }
+
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -17,8 +28,9 @@ class ReviewsController extends Controller
     public function index()
     {
         //get all products
-        $reviews = Review::all();
 
+
+        $reviews = Review::all();
         //return a view and send the variable $products with it.
         return view('reviews.index', compact('reviews'));
     }

@@ -12,7 +12,7 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(User::class, 1)->create([
+        factory(App\User::class, 1)->create([
             'name'=>'owner',
             'email'=>'owner@site.nl',
             'password'=>bcrypt('test123')
@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
             $user->assignRole('owner');
         });
 
-        factory(User::class, 1)->create([
+        factory(App\User::class, 1)->create([
             'name'=>'moderator',
             'email'=>'moderator@site.nl',
             'password'=>bcrypt('test123')
@@ -28,7 +28,7 @@ class UsersTableSeeder extends Seeder
             $user->assignRole('moderator');
         });
 
-        factory(User::class, 1)->create([
+        factory(App\User::class, 1)->create([
             'name'=>'customer',
             'email'=>'customer@site.nl',
             'password'=>bcrypt('test123')
@@ -36,6 +36,6 @@ class UsersTableSeeder extends Seeder
             $user->assignRole('customer');
         });
 
-        factory(User::class, 50)->create();
+        factory(App\User::class, 50)->create();
     }
 }
