@@ -29,7 +29,6 @@ class ReviewsController extends Controller
     {
         //get all products
 
-
         $reviews = Review::all();
         //return a view and send the variable $products with it.
         return view('reviews.index', compact('reviews'));
@@ -42,7 +41,8 @@ class ReviewsController extends Controller
      */
     public function create()
     {
-        return view('reviews.create');
+        $products = Product::all();
+        return view('reviews.create', compact('products'));
     }
 
     /**
@@ -55,9 +55,9 @@ class ReviewsController extends Controller
     {
         //create new Product
         $review = new Review();
-        //attributes00000000
         $review->title = $request->title;
-        $review->username = $request->username;
+        $review->user_id = Auth::user()->id;
+        $review->product_id = $request->product_id;
         $review->body = $request->body;
         $review->rating = $request->rating;
         //save review in Database (execute inserts)
@@ -86,7 +86,7 @@ class ReviewsController extends Controller
      */
     public function edit(Review $review)
     {
-        //
+        $products = Product::all();
         return view('reviews.edit', compact('review'));
     }
 

@@ -19,12 +19,16 @@
             <li class="nav-item">
                 <a href="{{route('reviews.index')}}" class="nav-link">Index</a>
             </li>
-            <li class="nav-item">
-                <a href="{{route('reviews.create')}}" class="nav-link">Create</a>
-            </li>
-            <li class="nav-item">
-                <a href="{{route('reviews.edit', ['review' => $review->id])}}" class="nav-link active">Edit Review</a>
-            </li>
+            @can('create reviews')
+                <li class="nav-item">
+                    <a href="{{route('reviews.create')}}" class="nav-link">Create</a>
+                </li>
+            @endcan
+            @can('edit reviews')
+                <li class="nav-item">
+                    <a href="{{route('reviews.edit', ['review' => $review->id])}}" class="nav-link active">Edit Review</a>
+                </li>
+            @endcan
         </ul>
     </nav>
 
@@ -38,12 +42,12 @@
         </div>
 
         <div class="form-group">
-            <label for="username">Username<label>
+            <label for="username">Username</label>
             <input type="text" name="username" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username" value="{{$review->username}}">
         </div>
 
         <div class="form-group">
-            <label for="body">Body<label>
+            <label for="body">Body</label>
             <textarea class="form-control" name="body" id="body" rows="3">{{$review->body}}</textarea>
         </div>
 

@@ -25,7 +25,7 @@ class ReviewsStoreRequest extends FormRequest
     {
         return [
             'title' => 'required|unique:reviews',
-            'username' => 'required|max:100',
+            'product_id' => 'required|exists:products,id',
             'body' => 'required',
             'rating' => 'required|numeric'
         ];

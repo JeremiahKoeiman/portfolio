@@ -9,9 +9,11 @@
             <li class="nav-item">
                 <a href="{{route('reviews.index')}}" class="nav-link">Index</a>
             </li>
-            <li class="nav-item">
-                <a href="{{route('reviews.create')}}" class="nav-link">Create</a>
-            </li>
+            @can('create reviews')
+                <li class="nav-item">
+                    <a href="{{route('reviews.create')}}" class="nav-link">Create</a>
+                </li>
+            @endcan
             <li class="nav-item">
                 <a href="{{route('reviews.show', ['review' => $review->id])}}" class="nav-link active">Review details</a>
             </li>

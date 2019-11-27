@@ -15,9 +15,11 @@
             <li class="nav-item">
                 <a href="{{route('reviews.index')}}" class="nav-link active">Index</a>
             </li>
-            <li class="nav-item">
-                <a href="{{route('reviews.create')}}" class="nav-link">Create</a>
-            </li>
+            @can('create reviews')
+                <li class="nav-item">
+                    <a href="{{route('reviews.create')}}" class="nav-link">Create</a>
+                </li>
+            @endcan
         </ul>
     </nav>
 
@@ -30,8 +32,12 @@
                 <th scope="col">Body</th>
                 <th scope="col">Rating</th>
                 <th scope="col">Details</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                @can('edit reviews')
+                    <th scope="col">Edit</th>
+                @endcan
+                @can('delete reviews')
+                    <th scope="col">Delete</th>
+                @endcan
             </tr>
         </thead>
         <tbody>
@@ -39,12 +45,16 @@
                 <tr>
                     <td scope="row">{{$review->id}}</td>
                     <td>{{$review->title}}</td>
-                    <td>{{$review->username}}</td>
+                    <td>{{$review->user->name}}</td>
                     <td>{{$review->body}}</td>
                     <td>{{$review->rating}}</td>
                     <td><a href="{{route('reviews.show', ['review' => $review->id])}}">Details</a></td>
-                    <td><a href="{{route('reviews.edit', ['review' => $review->id])}}">Edit</a></td>
-                    <td><a href="{{route('reviews.delete', ['review' => $review->id])}}">Delete</a></td>
+                    @can('edit reviews')
+                        <td><a href="{{route('reviews.edit', ['review' => $review->id])}}">Edit</a></td>
+                    @endcan
+                    @can('delete reviews')
+                        <td><a href="{{route('reviews.delete', ['review' => $review->id])}}">Delete</a></td>
+                    @endcan
                 </tr>
             @endforeach
         </tbody>
